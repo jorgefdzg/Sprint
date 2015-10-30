@@ -1,3 +1,3 @@
 from django.db import models
-#prueba de pull
+#prueba
 # Create your models here.
