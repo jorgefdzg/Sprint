@@ -3,25 +3,25 @@ from django.db import models
 # Create your models here.
 
 
-class Deporte(models.Deporte):
+class Deporte(models.Model):
     """docstring for deporte"""
     dpr_info = models.CharField(max_length="30")
 
 
-class Amigos(models.Amigos):
+class Amigos(models.Model):
     """docstring for Amigos"""
-    usr_id1 = models.IntegerField(null=False, blank=True)
-    usr_id2 = models.IntegerField(null=False, blank=True)
+    usr_id1 = models.IntegerField(null=True, blank=False)
+    usr_id2 = models.IntegerField(null=True, blank=False)
 
 
-class Actividad(models.Actividad):
+class Actividad(models.Model):
     """docstring for Actividad"""
-    clb_id = models.IntegerField(null=False, blank=True)
-    usr_id = models.IntegerField(null=False, blank=True)
+    clb_id = models.IntegerField(null=True, blank=False)
+    usr_id = models.IntegerField(null=True, blank=False)
     act_info = models.CharField(max_length="500")
 
 
-class DeporteUsuario(models.DeporteUsuario):
+class DeporteUsuario(models.Model):
     """docstring for Deporte-Usuario"""
-    dpr_id = models.IntegerField(null=False, blank=True)
-    usr_id = models.IntegerField(null=False, blank=True)
+    dpr_id = models.IntegerField(null=True, blank=False)
+    usr_id = models.IntegerField(null=True, blank=False)
