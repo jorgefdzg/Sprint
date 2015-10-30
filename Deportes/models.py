@@ -14,14 +14,14 @@ class Amigos(models.Amigos):
     usr_id2 = models.IntegerField(null=False, blank=True)
 
 
-class Actividad(object):
+class Actividad(models.Actividad):
     """docstring for Actividad"""
     clb_id = models.IntegerField(null=False, blank=True)
     usr_id = models.IntegerField(null=False, blank=True)
     act_info = models.CharField(max_length="500")
 
 
-class DeporteUsuario(object):
+class DeporteUsuario(models.DeporteUsuario):
     """docstring for Deporte-Usuario"""
     dpr_id = models.IntegerField(null=False, blank=True)
     usr_id = models.IntegerField(null=False, blank=True)
