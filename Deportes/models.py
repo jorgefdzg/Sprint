@@ -17,6 +17,7 @@ class Usuario(models.Model):
     usr_usu = models.CharField(max_length="30")
     usr_pas = models.CharField(max_length="40")
     usr_edad = models.IntegerField(null=True, blank=False)
+    usr_amg = models.ManyToManyField('Usuario')
 
 
 class Direccion(models.Model):
@@ -27,12 +28,6 @@ class Direccion(models.Model):
     drc_codigo = models.IntegerField(null=True, blank=False)
     drc_calle = models.CharField(max_length="20")
     drc_num = models.IntegerField(null=True, blank=False)
-
-
-class Amigos(models.Model):
-    """docstring for Amigos"""
-    usr_id1 = models.ForeignKey(Usuario)
-    usr_id2 = models.ForeignKey(Usuario)
 
 
 class Club(models.Model):
